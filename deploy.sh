@@ -11,6 +11,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f https://github.com/K4maS/choose-rate.git main:gh-pages
+git push -f https://github.com/K4maS/choose-rate.git master:gh-pages
 
 cd -
