@@ -1,4 +1,5 @@
 import './styles/styles.scss';
+
 const buttons = document.querySelectorAll('.action-btn');
 
 const onClick = (e)=> {
@@ -14,29 +15,37 @@ const onClick = (e)=> {
             console.log('Название тарифа не найдено')
         }
     } else { console.log('Класс компонента не найден')}
-}; 
+};
+
+buttons.forEach(button => {
+    button.addEventListener ('click', onClick )
+}) 
+
+
+const dateFormat = (date)=> {
+    return  date.toString().padStart(2, '0');
+}
+
+const doRender =(hours, minutes, seconds) => {
+
+    const nowTime =  `${dateFormat(hours)}:${dateFormat(minutes)}:${dateFormat(seconds)}` 
+    const timerData = document.querySelector('.timer-data');
+     
+    if(timerData) {
+        timerData.textContent = nowTime;
+    }
+};
 
 const doTimer = () => {
     const date = new Date();
 
-    const dateFormat = (date)=> {
-        return  date.toString().padStart(2, '0');
-    }
+  
     
     let hours =  date.getHours();
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
  
 
-    const doRender =(hours, minutes, seconds) => {
-
-        const nowTime =  `${dateFormat(hours)}:${dateFormat(minutes)}:${dateFormat(seconds)}` 
-        const timerData = document.querySelector('.timer-data');
-         
-        if(timerData) {
-            timerData.textContent = nowTime;
-        }
-    };
    
         doRender(hours, minutes, seconds);
 
@@ -61,15 +70,9 @@ const doTimer = () => {
            
 
           
-        } , 1000)
+        } , 1)
 
 }
 
- 
-
-    buttons.forEach(button => {
-        button.addEventListener ('click', onClick )
-    }) 
-
-    doTimer()
+doTimer()
  

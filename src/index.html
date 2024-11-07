@@ -20,17 +20,17 @@
     </svg>
   
 
-    <div class="container">
-        <section class="rates">
+    <div class="container" role="main">
+        <section class="rates" aria-labelledby="rates-title">
             <p class="rates__text">
                 Выберите лучший
             </p>
-            <h1 class="rates__title">Актуальные тарифы</h1>
+            <h1 id="rates-title" class="rates__title">Актуальные тарифы</h1>
             <ul class="rates__list">
-                <li class="rates__item item item1">
+                <li class="rates__item item item1"  tabindex="0">
                     <div class="item__top">
                         <div class="item__label">
-                            <svg  width="32" height="32" >
+                            <svg aria-hidden="true"  width="32" height="32" >
                                 <use xlink:href="#chat"></use>
                             </svg>
                         </div>
@@ -50,11 +50,11 @@
                                 В любое время
                             </p>
 
-                            <button class="btn-block__btn btn action-btn">
-                                Выбрать
+                            <button type="button" class="btn-block__btn btn action-btn"    aria-label="Выбрать консультацию">
+                        Выбрать 
                             </button>
                             </div>
-                      
+                            
                     </div>
                     <ul class="item__text-list text-list ">
                         <li class="text-list__item"> <span class="text">
@@ -79,10 +79,10 @@
                         </li>
                     </ul>
                 </li>
-                <li class="rates__item item item--golden item2">
+                <li class="rates__item item item--golden item2" tabindex="0">
                     <div class="item__top">
                     <div class="item__label">
-                            <svg width="20" height="28">
+                            <svg aria-hidden="true" width="20" height="28">
                                 <use xlink:href="#lightning"></use>
                             </svg>
                             
@@ -103,7 +103,7 @@
                                 Единоразовый платеж
                             </p>
 
-                            <button class="btn-block__btn btn action-btn">
+                            <button class="btn-block__btn btn action-btn"  aria-label="Выбрать базовый тариф">
                                 Выбрать
                             </button>
                             </div>
@@ -112,7 +112,7 @@
                                <p>
                                  Гарантия <br> списания
                                </p>
-                               <div class="tooltip">
+                               <div class="tooltip"  role="tooltip" aria-label="Информация о гарантии" tabindex="0">
                                  <div class="tooltip__popup">
                                     Для Вашего спокойствия мы гарантируем<br>
                                      возврат оплаты в случае отсутствия<br>
@@ -177,7 +177,7 @@
                                 На 24 месяца
                             </p>
 
-                            <button class="btn-block__btn btn action-btn">
+                            <button class="btn-block__btn btn action-btn" aria-label="Выбрать Рассрочку">
                                 Выбрать
                             </button>
                             </div>
@@ -186,7 +186,7 @@
                            <p>
                              Гарантия <br> списания
                            </p>
-                           <div class="tooltip">
+                           <div class="tooltip"  role="tooltip" aria-label="Информация о гарантии" tabindex="0">
                             <div class="tooltip__popup">
                                 Для Вашего спокойствия мы гарантируем<br>
                                 возврат оплаты в случае отсутствия<br>
