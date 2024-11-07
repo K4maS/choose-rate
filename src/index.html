@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Актуальные тарифы</title>
+</head>
+<body>
+   <svg style="display: none;">
+        <symbol id="chat" width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.7867 16.5333V21.96C20.7867 22.44 20.7333 22.8933 20.6133 23.3067C20.12 25.2667 18.4933 26.4933 16.2533 26.4933H12.6267L8.59999 29.1733C7.99999 29.5867 7.19999 29.1467 7.19999 28.4267V26.4933C5.83999 26.4933 4.70666 26.04 3.91999 25.2533C3.11999 24.4533 2.66666 23.32 2.66666 21.96V16.5333C2.66666 14 4.23999 12.2533 6.66666 12.0267C6.83999 12.0133 7.01332 12 7.19999 12H16.2533C18.9733 12 20.7867 13.8133 20.7867 16.5333Z" />
+            <path d="M23.6667 20.8C25.36 20.8 26.7867 20.24 27.7733 19.24C28.7733 18.2533 29.3333 16.8267 29.3333 15.1333V8.33334C29.3333 5.20001 26.8 2.66667 23.6667 2.66667H12.3333C9.19999 2.66667 6.66666 5.20001 6.66666 8.33334V9.33334C6.66666 9.70667 6.95999 10 7.33332 10H16.2533C19.8667 10 22.7867 12.92 22.7867 16.5333V20.1333C22.7867 20.5067 23.08 20.8 23.4533 20.8H23.6667Z" />
+        </symbol>
+        <symbol id="lightning"  viewBox="0 0 20 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.88 12.2933H13.76V2.69333C13.76 0.453329 12.5467 -4.52995e-06 11.0667 1.68L10 2.89333L0.973333 13.16C-0.266667 14.56 0.253333 15.7067 2.12 15.7067H6.24V25.3067C6.24 27.5467 7.45333 28 8.93333 26.32L10 25.1067L19.0267 14.84C20.2667 13.44 19.7467 12.2933 17.88 12.2933Z" />
+        </symbol>
+        <symbol id="percent"  width="28" height="28" viewBox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.7067 12.4933L24.68 10.4667C24.3333 10.12 24.0533 9.44001 24.0533 8.96001V6.08001C24.0533 4.90667 23.0933 3.94667 21.92 3.94667H19.0533C18.5733 3.94667 17.8933 3.66667 17.5467 3.32001L15.52 1.29334C14.6933 0.466673 13.3333 0.466673 12.5067 1.29334L10.4533 3.32001C10.12 3.66667 9.44001 3.94667 8.94667 3.94667H6.08001C4.90667 3.94667 3.94667 4.90667 3.94667 6.08001V8.94667C3.94667 9.42667 3.66667 10.1067 3.32001 10.4533L1.29334 12.48C0.466673 13.3067 0.466673 14.6667 1.29334 15.4933L3.32001 17.52C3.66667 17.8667 3.94667 18.5467 3.94667 19.0267V21.8933C3.94667 23.0667 4.90667 24.0267 6.08001 24.0267H8.94667C9.42667 24.0267 10.1067 24.3067 10.4533 24.6533L12.48 26.68C13.3067 27.5067 14.6667 27.5067 15.4933 26.68L17.52 24.6533C17.8667 24.3067 18.5467 24.0267 19.0267 24.0267H21.8933C23.0667 24.0267 24.0267 23.0667 24.0267 21.8933V19.0267C24.0267 18.5467 24.3067 17.8667 24.6533 17.52L26.68 15.4933C27.5467 14.68 27.5467 13.32 26.7067 12.4933ZM8.66667 10C8.66667 9.26667 9.26667 8.66667 10 8.66667C10.7333 8.66667 11.3333 9.26667 11.3333 10C11.3333 10.7333 10.7467 11.3333 10 11.3333C9.26667 11.3333 8.66667 10.7333 8.66667 10ZM10.7067 18.7067C10.5067 18.9067 10.2533 19 10 19C9.74667 19 9.49334 18.9067 9.29334 18.7067C8.90667 18.32 8.90667 17.68 9.29334 17.2933L17.2933 9.29334C17.68 8.90667 18.32 8.90667 18.7067 9.29334C19.0933 9.68001 19.0933 10.32 18.7067 10.7067L10.7067 18.7067ZM18 19.3333C17.2533 19.3333 16.6533 18.7333 16.6533 18C16.6533 17.2667 17.2533 16.6667 17.9867 16.6667C18.72 16.6667 19.32 17.2667 19.32 18C19.32 18.7333 18.7333 19.3333 18 19.3333Z" />
+        </symbol>
+    </svg>
+  
+
+    <div class="container">
+        <section class="rates">
+            <p class="rates__text">
+                Выберите лучший
+            </p>
+            <h1 class="rates__title">Актуальные тарифы</h1>
+            <ul class="rates__list">
+                <li class="rates__item item item1">
+                    <div class="item__top">
+                        <div class="item__label">
+                            <svg  width="32" height="32" >
+                                <use xlink:href="#chat"></use>
+                            </svg>
+                        </div>
+                        <h2 class="item__title">
+                            Консультация
+                        </h2>
+                        <p class="item__text text">
+                            Основные вопросы и направления
+                        </p>
+                    </div>
+                    <div class="item__btn-block btn-block btn-block--gold ">
+                        <div class="btn-block__top">
+                            <h3 class="btn-block__title">
+                                Бесплатно
+                            </h3>
+                            <p class="item__text text btn-block__text">
+                                В любое время
+                            </p>
+
+                            <button class="btn-block__btn btn action-btn">
+                                Выбрать
+                            </button>
+                            </div>
+                      
+                    </div>
+                    <ul class="item__text-list text-list ">
+                        <li class="text-list__item"> <span class="text">
+                            В любое удобное время
+                        </span>
+                            
+                        </li>
+                        <li class="text-list__item"> <span class="text">
+                            Расскажем о всех нюансах процедуры
+                        </span>
+                           
+                        </li>
+                        <li class="text-list__item"> <span class="text">
+                            Предложим варианты решения вашей проблемы
+                        </span>
+                           
+                        </li>
+                        <li class="text-list__item"> <span class="text">
+                            Подготовим рекомендаци
+                        </span>
+                            
+                        </li>
+                    </ul>
+                </li>
+                <li class="rates__item item item--golden item2">
+                    <div class="item__top">
+                    <div class="item__label">
+                            <svg width="20" height="28">
+                                <use xlink:href="#lightning"></use>
+                            </svg>
+                            
+                        </div>
+                        <h2 class="item__title">
+                            Базовый тариф
+                        </h2>
+                        <p class="item__text text">
+                            От любого банка без процентов и переплат
+                        </p>
+                    </div>
+                    <div class="item__btn-block btn-block btn-block--gold ">
+                        <div class="btn-block__top">
+                            <h3 class="btn-block__title">
+                                65 000 ₽
+                            </h3>
+                            <p class="item__text text btn-block__text">
+                                Единоразовый платеж
+                            </p>
+
+                            <button class="btn-block__btn btn action-btn">
+                                Выбрать
+                            </button>
+                            </div>
+                            <div class="btn-block__bottom ">
+                                
+                               <p>
+                                 Гарантия <br> списания
+                               </p>
+                               <div class="tooltip">
+                                 <div class="tooltip__popup">
+                                    Для Вашего спокойствия мы гарантируем<br>
+                                     возврат оплаты в случае отсутствия<br>
+                                     списания долгов после процедуры.
+                                </div>
+                               </div>
+                            </div>
+                         
+                     
+                    </div>
+                    <ul class="item__text-list text-list ">
+                        <li class="text-list__item"> <span class="text">
+                            Сбор всех необходимых документов
+                        </span>
+                            
+                        </li>
+                        <li class="text-list__item"> <span class="text">
+                            Сбор всех необходимых документов
+                        </span>
+                            
+                        </li>
+                        <li class="text-list__item"> <span class="text">
+                            Взаимодействие с финансовым управляющим
+                        </span>
+                         
+                        </li>
+                        <li class="text-list__item"> <span class="text">
+                            Контроль процедуры реализац. имущества
+                        </span>
+                            
+                        </li>
+                        <li class="text-list__item"> <span class="text">
+                            Поддержка и сопровождение клиента на всех этапах банкротства
+                        </span>
+                          
+                        </li>
+                    </ul>
+                </li> 
+                <li class="rates__item item item3">
+                    <div class="item__timer timer">
+                        <span class="timer__time timer-data">00:00:00</span>
+                    </div >    
+                    <div class="item__top">
+                        <div class="item__label">
+                            <svg width="28" height="28">
+                                <use xlink:href="#percent"></use>
+                            </svg>
+                        </div>
+                        <h2 class="item__title">
+                            Рассрочка
+                        </h2>
+                        <p class="item__text text">
+                            От любого банка без процентов и переплат
+                        </p>
+                    </div>
+                    <div class="item__btn-block btn-block btn-block--gold ">
+                        <div class="btn-block__top">
+                            <h3 class="btn-block__title">
+                                3880 ₽ / мес.
+                            </h3>
+                            <p class="item__text text btn-block__text">
+                                На 24 месяца
+                            </p>
+
+                            <button class="btn-block__btn btn action-btn">
+                                Выбрать
+                            </button>
+                            </div>
+                        <div class="btn-block__bottom ">
+                            
+                           <p>
+                             Гарантия <br> списания
+                           </p>
+                           <div class="tooltip">
+                            <div class="tooltip__popup">
+                                Для Вашего спокойствия мы гарантируем<br>
+                                возврат оплаты в случае отсутствия<br>
+                                списания долгов после процедуры.
+                            </div>
+                           </div>
+                        </div>
+                     
+                    </div>
+                    <ul class="item__text-list text-list ">
+                        <li class="text-list__item"> <span class="text">
+                              Удобные варианты рассрочки 
+                        </span>
+                          <span class="ico-banks"></span>
+                        </li>
+                        <li class="text-list__item"> <span class="text">
+                            Комфортные условия оплаты
+                        </span>
+                           
+                        </li>
+                        <li class="text-list__item"> <span class="text">
+                            Фиксированная сумма
+                        </span>
+                            
+                        </li>
+                        <li class="text-list__item"> <span class="text">
+                            Гарантия возврата средств
+                        </span>
+                            
+                        </li>
+                        <li class="text-list__item"> <span class="text">
+                            Остальное, что и в базовом тарифе
+                        </span>
+                            
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
