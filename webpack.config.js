@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebpackObfuscator = require('webpack-obfuscator');
 
 module.exports = {
   entry: './src/index.js', 
@@ -13,13 +14,31 @@ module.exports = {
     clean: true,
   },
   module: {
+    mode: 'production',
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({
+          terserOptions: {
+            compress: {
+              drop_console: true,  
+            },
+            format: {
+              comments: false, 
+            },
+          },
+          extractComments: false,  
+        }),
+        new CssMinimizerPlugin(),
+      ],
+    },
     rules: [
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader, // Извлекает CSS в отдельные файлы
+          MiniCssExtractPlugin.loader, 
           'css-loader',
-          'sass-loader', // Компилирует SCSS в CSS
+          'sass-loader', 
           
         ],
       },
@@ -30,12 +49,12 @@ module.exports = {
           loader: 'babel-loader',
         }
       },
-      // Обработка изображений
+       
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,
-        type: 'asset/resource', // Встроенная обработка файлов в Webpack 5
+        type: 'asset/resource',  
         generator: {
-          filename: 'images/[name].[hash][ext]', // Куда помещать изображения в dist
+          filename: 'images/[name].[hash][ext]',  
         },
       },
       {
@@ -56,6 +75,11 @@ module.exports = {
       template: './src/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new WebpackObfuscator({
+      rotateStringArray: true,
+      stringArray: true,
+      stringArrayThreshold: 0.75,
+    }, ['excluded_file.js']),
   ],
 
   devServer: {
