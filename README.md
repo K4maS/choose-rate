@@ -17,13 +17,17 @@
 ## Запуск проекта
 1. Клонировать репозиторий:
    ```bash
-   git clone https://github.com/K4maS/choose-rate.git```
+   git clone https://github.com/K4maS/choose-rate.git
+   ```
 2. Установить зависимости:
     ```bash
-    npm install```
+    npm install
+    ```
 3. Запустить сборку проекта:
       ```bash
-    npm run build```
+    npm run build
+      ```
 4. Для локального запуска использовать:
    ```bash
-    npm start```
+    npm start
+   ```
