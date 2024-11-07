@@ -4,6 +4,8 @@ const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackObfuscator = require('webpack-obfuscator');
+const TerserPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js', 
@@ -13,25 +15,26 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), 
     clean: true,
   },
-  module: {
-    mode: 'production',
-    optimization: {
-      minimize: true,
-      minimizer: [
-        new TerserPlugin({
-          terserOptions: {
-            compress: {
-              drop_console: true,  
-            },
-            format: {
-              comments: false, 
-            },
+  mode: 'production',
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_console: true,  
           },
-          extractComments: false,  
-        }),
-        new CssMinimizerPlugin(),
-      ],
-    },
+          format: {
+            comments: false, 
+          },
+        },
+        extractComments: false,  
+      }),
+      new CssMinimizerPlugin(),
+    ],
+  },
+  module: {
+   
     rules: [
       {
         test: /\.scss$/,
